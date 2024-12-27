@@ -1,0 +1,16 @@
+{
+  "name": "Aura App",
+  "short_name": "Aura",
+  "description": "A smart home app built with Vue.js.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "400x400",
+      "type": "image/ico"
+    }
+  ]
+}
