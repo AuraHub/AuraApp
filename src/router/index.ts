@@ -1,10 +1,10 @@
+import Home from '@/views/Home.vue'
+import Login from '@/views/Login.vue'
+import Rooms from '@/views/Rooms.vue'
+import Settings from '@/views/Settings.vue'
+import YourRoom from '@/views/YourRoom.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import { checkAuth } from '../utils/auth.js'
-import Home from '../views/Home.vue'
-import Login from '../views/Login.vue'
-import Rooms from '../views/Rooms.vue'
-import Settings from '../views/Settings.vue'
-import YourRoom from '../views/YourRoom.vue'
 
 const routes = [
   { path: '/', component: Home },

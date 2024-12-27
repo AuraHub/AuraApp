@@ -3,9 +3,9 @@
     <form @submit.prevent="login" class="bg-darkBackground p-6 rounded-lg shadow-lg">
       <h2 class="text-xl font-semibold mb-4">Login</h2>
       <input
-        v-model="username"
+        v-model="email"
         type="text"
-        placeholder="Username"
+        placeholder="Email"
         class="mb-4 p-2 w-full bg-darkBackground text-pandaWhite border border-pandaGreen"
       />
       <input
@@ -23,14 +23,26 @@
 
 <script>
 export default {
-  data() {
-    return {
-      username: '',
-      password: '',
-    }
-  },
   methods: {
-    async login() {},
+    async login() {
+      try {
+        const response = await await fetch(`http://localhost:3000/login`, {
+          method: 'POST',
+          body: JSON.stringify({ email: this.email, password: this.password }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'include',
+        })
+        if (response.ok) {
+          this.$router.push('/')
+        } else {
+          alert('Login failed')
+        }
+      } catch (error) {
+        alert('An error occurred')
+      }
+    },
   },
 }
 </script>

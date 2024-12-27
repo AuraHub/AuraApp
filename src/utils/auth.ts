@@ -1,6 +1,6 @@
 export const checkAuth = async () => {
   try {
-    const response = await fetch(`${process.env.API_HOST}/validate`, {
+    const response = await fetch('http://localhost:3000/validate', {
       method: 'GET',
       credentials: 'include', // Ensures cookies are sent with the request
     })

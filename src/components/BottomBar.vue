@@ -2,7 +2,7 @@
   <div
     class="fixed bottom-0 left-0 w-full bg-darkBackground text-pandaWhite flex justify-around items-center p-3 shadow-md"
   >
-    <button @click="goTo('home')" class="flex flex-col items-center text-sm">
+    <button @click="goTo('')" class="flex flex-col items-center text-sm">
       <span>Home</span>
     </button>
     <button @click="goTo('rooms')" class="flex flex-col items-center text-sm">
